@@ -1,0 +1,64 @@
+开发环境
+OS：CentOS release 6.7
+WEB：tornado-4.4.2
+DB：mysql 5.1.73
+前端：bootstrap
+
+相关软件包
+
+日志
+logging-0.4.9.6
+
+密码加密软件包：
+passlib-1.6.2.tar.gz or pip2.6 install passlib
+
+torndb数据库环境需要软件包
+pip2.6 install torndb
+
+相关学习资料：
+tornado官网
+http://www.tornadoweb.org/en/stable/
+tornado源码导读
+http://www.nowamagic.net/academy/detail/13321002
+tornado类似案例
+http://my.oschina.net/quanpower/blog/132294
+tornado 学习资料
+http://demo.pythoner.com/itt2zh/index.html
+saltstack学习资料
+http://www.saltstack.cn/projects/cssug-kb/wiki
+
+开发进度：
+2016年11月21日
+1、在windows7配置eclipse + pydev，安装python26.
+2、创建RATEL项目，创建程序目录和基本架构。
+3、完成日志模块。
+
+2016年11月22日
+1、完成数据库配置文件和读取。
+2、完成数据库操作模块。
+3、密码加解密模块。
+4、生成cookie_secret。
+	import base64
+	import uuid
+	base64.b64encode(uuid.uuid4().bytes + uuid.uuid4().bytes)
+
+2016年11月23日
+1、完成登录和初始页面。
+2、用户登录失败弹窗并回到登录页面。成功记录登录时间到数据库，页面转到初始界面。
+今日计划：
+3、cookies，bootstrap。
+
+2016年11月24日
+1、bootstrap。
+2、用户管理。
+
+目前开发进度是创建和查询系统用户。
+
+运行步骤：
+1、安装mysql，倒入库mysql -uroot -pdb < sql/RATEL.sql
+2、安装python依赖。
+pip2.6 install passlib
+pip2.6 install torndb
+yum install python-devel && pip2.6 install MySQL-python
+3、运行：python2.6 ratel.py
+初始登录用户和密码是admin/admin
