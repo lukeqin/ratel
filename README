@@ -55,7 +55,7 @@ http://www.saltstack.cn/projects/cssug-kb/wiki
 目前开发进度是创建和查询系统用户。
 
 运行步骤：
-1、安装mysql，倒入库mysql -uroot -pdb < sql/RATEL.sql
+1、安装mysql，导入库mysql -uroot -pdb < sql/RATEL.sql
 2、安装python依赖。
 pip2.6 install passlib
 pip2.6 install torndb
